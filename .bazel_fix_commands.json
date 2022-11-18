@@ -1,5 +1,12 @@
-[{
-    "regex": "^Check that imports in Go sources match importpath attributes in deps.$",
-    "command": "bazel",
-    "args":    ["run", "//:gazelle"]
-}]
+[
+    {
+        "regex": "^Check that imports in Go sources match importpath attributes in deps.$",
+        "command": "bazel",
+        "args":    ["run", "//:gazelle"]
+    },
+    {
+        "regex": "^Target \\/\\/internal\\/ibazel\\/(.+):output_runner_test up-to-date:$",
+        "command": "echo",
+        "args":    ["target=$1"]
+    }
+]
