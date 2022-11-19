@@ -32,7 +32,7 @@ func TestConvertArgs(t *testing.T) {
 		cmd   string
 		truth string
 	}{
-		{"$1", "my_command"},
+		{"target=$1", "target=my_command"},
 		{"warning", "warning"},
 		{"keep_command", "keep_command"},
 	} {
